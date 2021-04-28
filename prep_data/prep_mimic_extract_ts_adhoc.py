@@ -355,10 +355,9 @@ class ChartEventDic(object):
         if mimic_itemidx in self.chart_raw_mimic_ids:
 
             if mimic_itemidx in self.range_dic.keys():
-                if self.range_dic[mimic_itemidx]['normal_l'] > value:
+                if self.range_dic[mimic_itemidx]['normal_l'] > float(value):
                     _value = 'ABNORMAL_LOW'
-
-                elif self.range_dic[mimic_itemidx]['normal_h'] < value:
+                elif self.range_dic[mimic_itemidx]['normal_h'] < float(value):
                     _value = 'ABNORMAL_HIGH'
                 else:
                     _value = 'NORMAL'
